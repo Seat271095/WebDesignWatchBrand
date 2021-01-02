@@ -1,0 +1,270 @@
+:root{
+    --fontmain:'Poppins', sans-serif;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontmain); 
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../IMG/1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 2s;
+}
+
+.navbar{
+    width: 100%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+nav{
+    float: 1;
+    padding-left: 60px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    color: #d3af80;
+}
+
+.content h1{
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color: #d3af80;
+}
+
+.content p{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.content{
+    margin-top: 10%;
+}
+
+.content .btn{
+    display: inline-block;
+    background: linear-gradient(45deg, #FFD194,  #D1913C);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    /*box-shadow: 3px 8px 22px rgb(94,28,68,0.15);*/
+}
+
+
+.search-box{
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.icon-search:hover{
+    opacity: 0.5;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #d3af80;
+}
+
+.search-box input{
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+}
+
+::placeholder{
+    color: #fff;
+
+}
+
+.arrow-icons{
+    margin-top: 40px;
+    margin-left: 25px;
+    display: flex;
+}
+
+.arrow-icons img{
+    width: 40px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: #000000; 
+    width:auto; 
+    height: 100%; 
+    color: white;
+}
+
+.foot-text{
+    text-align: center;
+    padding: 10px;
+}
+
+.social-icons{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding-bottom: 10px;
+}
+
+.social-icons svg{
+    height: 16px;
+    margin: 5px 15px;
+}
+
+#fb{
+    fill: white;
+}
+
+#tw{
+    fill: white;
+}
+
+#fb:hover{
+    fill:#d3af80;
+}
+
+#tw:hover{
+    fill: #d3af80;
+}
+
+#im{
+    fill: white;
+}
+
+#im:hover{
+    fill: #d3af80;
+}
+
+.col-1{
+    flex-basis: 30%;
+    position: relative;
+    margin-left: 30px;
+}
+
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 52%;
+    background: linear-gradient(45deg, #D1913C, #FFD194);
+    position: absolute;
+    left: -40px;
+    top: 100px;
+}
+
+.cool::after{
+content:'';
+display: block;
+width: 0%;
+height: 2px;
+background: #fff;
+transition: width .3s;
+}
+
+.cool:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+@media (max-width: 991px)
+{
+    nav
+    {
+        padding: 20px 5px;
+    }
+    nav ul
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        z-index: 1;
+        flex-direction: column;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        transition: 0.2s;/*En menos de una fraccion de segundo de esconde y aparece*/
+        visibility: hidden;/*La nueva caja del menu diseñado se oculata*/
+        opacity: 0;
+    }
+    nav ul.active/*Cuando la funcion se active*/
+    {
+        visibility:visible;
+        opacity: 1;
+    }
+    nav ul li a
+    {
+        display: inline-block;
+        color:rgb(255, 255, 255);
+        font-weight: 400;
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 2em;
+        margin: 10px 0;
+    }
+    nav ul li a:hover 
+    {
+        color: #FFD194;
+    }
+    .toggleMenu
+    {
+        position: relative;
+        width: 40px; 
+        height: 40px;
+        background-image: url(../IMG/menu.png);/*Es indispensable poner los 2 primero puntos para que de detecte la imagen*/
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .toggleMenu.active
+    {
+        background: url(../IMG/close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        
+    }
+}
