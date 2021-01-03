@@ -3,9 +3,9 @@ var next = document.getElementById("next");
 var hero = document.getElementById("container");
 
 var backgroundImg = new Array(
-"IMG/1.jpg",
-"IMG/2.jpg",
 "IMG/3.jpg",
+"IMG/2.jpg",
+"IMG/1.jpg",
 );
 
 let i = 0;

@@ -4,22 +4,23 @@
 
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: var(--fontmain); 
 }
 
 #container{
     height: 100vh;
     width: auto;
-    background-image: url(../IMG/1.jpg);
+    background-image: url(../IMG/3.jpg);
     background-position: center;
     background-size: cover;
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
     padding-bottom: 0.5%;
-    transition: 2s;
+    transition:all 2s;
+    transition-delay: 0.5s;
 }
 
 .navbar{
@@ -127,7 +128,7 @@ input:focus::-webkit-input-placeholder {
 
 footer{
     background-color: #000000; 
-    width:auto; 
+    width: auto; 
     height: auto; 
     color: white;
     
@@ -207,11 +208,29 @@ transition: width .3s;
 @media (max-width: 991px)
 {
     #container{
-    height: auto;
+    height:auto;
     width: auto;
     }
-    nav
-    {
+
+    .content{
+        margin-top: 20%;
+        height: auto;
+        padding-bottom: 170px;
+    }
+
+    .content h1{
+        font-size: 40px;
+    }
+
+    .arrow-icons img{
+        width: 55px;
+        max-width: 100px;
+        padding-top: 60px;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    nav{
         padding: 20px 5px;
     }
     nav ul
